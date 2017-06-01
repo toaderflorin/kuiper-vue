@@ -1,0 +1,16 @@
+<p>
+  <a href="{{baseUrl}}/new"><img src="{{baseUrl}}/pencil.png" style="width: 40px; height: 40px;" /></a>  
+</p>
+<br />
+
+<h1>Your posts</h1>
+
+{{#unless hasPosts}}
+<p class="grayed-out">No posts to show.</p>
+{{/unless}}
+
+{{#each posts}}
+<p>
+<a href="{{baseUrl}}/{{title}}">{{title}}</a>
+</p>
+{{/each}}
